@@ -1,0 +1,7 @@
+def sortedSquares(nums):
+    result = []
+    for num in nums:
+        result.append(num * num)
+    
+    result.sort()
+    return result
