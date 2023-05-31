@@ -1,0 +1,15 @@
+def complete_rows(n):
+    k = 0
+    totalCoins = 0
+    
+    while totalCoins <= n:
+        k += 1
+        totalCoins += k
+    
+    if totalCoins > n:
+        k -= 1
+    
+    return k
+
+
+print(complete_rows(5))  # Output: 2
