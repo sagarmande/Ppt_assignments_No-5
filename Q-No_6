@@ -1,0 +1,13 @@
+def findDuplicates(nums):
+    result = []
+    for num in nums:
+        abs_num = abs(num)
+        if nums[abs_num - 1] > 0:
+            nums[abs_num - 1] *= -1
+        else:
+            result.append(abs_num)
+    return result
+
+
+nums = [4, 3, 2, 7, 8, 2, 3, 1]
+print(findDuplicates(nums))
