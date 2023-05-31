@@ -1,0 +1,17 @@
+def convert_to_2d_array(original, m, n):
+    if m * n != len(original):
+        return []  # Impossible to form a valid 2D array
+    
+    result = []
+    for i in range(m):
+        row = original[i * n : (i + 1) * n]
+        result.append(row)
+    
+    return result
+
+
+original = [1, 2, 3, 4]
+m = 2
+n = 2
+result = convert_to_2d_array(original, m, n)
+print(result)
